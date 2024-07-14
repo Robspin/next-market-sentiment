@@ -1,0 +1,29 @@
+[
+  {
+    "name": "BTC",
+    "sentiment": "bullish",
+    "details": [
+      "Bullish cross",
+      "Bullish cloud",
+      "Price above cloud"
+    ]
+  },
+  {
+    "name": "ETH",
+    "sentiment": "neutral",
+    "details": [
+      "Bearish cross",
+      "Bullish cloud",
+      "Price above cloud"
+    ]
+  },
+  {
+    "name": "DOGE",
+    "sentiment": "neutral",
+    "details": [
+      "Bearish cross",
+      "Bullish cloud",
+      "Price above cloud"
+    ]
+  }
+]
