@@ -6,7 +6,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Market Mood",
-  description: 'Current sentiment, "At-A-Glance"',
+  description: 'Current sentiment, "At-A-Glance"'
 };
 
 export default function RootLayout({
@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>{children}</body>
-    </html>
+      <html lang="en">
+      <body className={montserrat.className}>
+        <link rel="icon" href="/m-favicon.ico" sizes="any"/>
+        {children}
+      </body>
+      </html>
   );
 }

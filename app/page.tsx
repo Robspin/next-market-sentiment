@@ -51,8 +51,8 @@ export default async function Page() {
 
   return (
       <div className="flex flex-col items-center min-h-screen bg-background">
-        <header className="w-full max-w-4xl px-4 md:px-6 py-8">
-            <h1 className="text-3xl font-bold text-center">Market Mood - <span className={sentimentClasses[marketMood]}>{capitalizeFirstLetter(marketMood)}</span></h1>
+        <header className="w-full max-w-4xl px-4 md:px-6 pt-24 pb-16">
+            <h1 className="text-5xl tracking-tighter font-bold text-center">Market Mood - <span className={sentimentClasses[marketMood]}>{capitalizeFirstLetter(marketMood)}</span></h1>
         </header>
         <main className="w-full max-w-4xl px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sentiments.map(item => <MarketCard item={item} key={item.coinName} />)}
