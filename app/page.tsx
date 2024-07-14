@@ -56,7 +56,6 @@ export default async function Page() {
         </header>
         <main className="w-full max-w-4xl px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sentiments.map(item => <MarketCard item={item} key={item.coinName} />)}
-            <TrendingUpIcon />
         </main>
       </div>
   )
