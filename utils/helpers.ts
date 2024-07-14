@@ -1,4 +1,4 @@
-import { Sentiment } from '@/utils/types'
+import { MinimalSentimentKeys, Sentiment } from '@/utils/types'
 
 export const calculateAverageScore = (sentiments: Sentiment[]) => {
     const { sum, count } = sentiments.reduce((acc, item) => {
@@ -10,15 +10,16 @@ export const calculateAverageScore = (sentiments: Sentiment[]) => {
     return Math.round(sum / count)
 }
 
-export const getMarketMood = (sentiments: Sentiment[]) => {
+export const getMarketMood = (sentiments: Sentiment[]): MinimalSentimentKeys => {
     const averageScore = calculateAverageScore(sentiments)
 
-    if (averageScore < 0) return 'Bearish'
-    if (averageScore === 0) return 'Neutral'
-    if (averageScore > 0) return 'Bullish'
+    if (averageScore < 0) return 'bearish'
+    if (averageScore === 0) return 'neutral'
+    if (averageScore > 0) return 'bullish'
+    return 'neutral'
 }
 
-function capitalizeFirstLetter(str: string): string {
+export const capitalizeFirstLetter = (str: string): string  => {
     if (str.length === 0) {
         return str
     }
