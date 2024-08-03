@@ -11,7 +11,7 @@ const sentimentClasses: { [key in MinimalSentimentKeys]: any } = {
         sentiment: 'text-red-600',
     },
     neutral: {
-        card: '',
+        card: 'bg-white',
         sentiment: ''
     },
     bullish: {
